@@ -1,4 +1,10 @@
-﻿class Implementor
+﻿###
+Design Pattern:		Bridge
+Type:				Structural
+Definition:			Decouple an abstraction from its implementation so that the two can vary independently.
+###
+
+class Implementor
 	operation: -> null
 
 class ConcreteImplementorA extends Implementor
@@ -18,8 +24,9 @@ class RefinedAbstraction extends Abstraction
 	operation: ->
 		@implementor.operation()
 
-
-console.log "Start Bridge Pattern"
+### 
+Usage
+###
 
 ab = new RefinedAbstraction
 
