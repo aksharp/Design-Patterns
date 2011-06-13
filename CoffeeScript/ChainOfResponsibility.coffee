@@ -21,7 +21,7 @@ class Handler
 
 class ConcreteHandler1 extends Handler
 	handle: (request) ->
-		if (request >=0 and request < 10)
+		if 0 <= request < 10
 			@getMessage()
 		else if @successor?
 			@successor.handle request
@@ -32,7 +32,7 @@ class ConcreteHandler1 extends Handler
 
 class ConcreteHandler2 extends Handler
 	handle: (request) ->
-		if (request >=10 and request < 20)
+		if 10 <= request < 20
 			@getMessage()
 		else if @successor?
 			@successor.handle request
@@ -42,7 +42,7 @@ class ConcreteHandler2 extends Handler
 
 class ConcreteHandler3 extends Handler
 	handle: (request) ->
-		if (request >=20 and request < 30)
+		if 20 <= request < 30
 			@getMessage()
 		else if successor?
 			@successor.handle request
