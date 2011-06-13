@@ -27,7 +27,9 @@ class Mortgage
 	isEligible: (customer, amount) ->
 		console.log "#{customer.name} applies for $#{amount} loan"
 		
-		Bank.hasSufficientSavings(customer, amount) and Credit.hasGoodCredit(customer) and Loan.hasNoBadLoans(customer)
+		Bank.hasSufficientSavings(customer, amount) and 
+		Credit.hasGoodCredit(customer) and 
+		Loan.hasNoBadLoans(customer)
 
 ### 
 Usage
