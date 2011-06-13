@@ -9,20 +9,20 @@ class Book
 	constructor: (@author, @title, @numCopies) ->
 
 	display: ->
-		console.log "Book"
-		console.log " Author: #{@author}"
-		console.log " Title: #{@title}"
-		console.log " # Copies: #{@numCopies}"
+		console.log """Book
+		\t Author: #{@author}
+		\t Title: #{@title}
+		\t # Copies: #{@numCopies}"""
 
 class Video
 	constructor: (@director, @title, @numCopies, @playTime) ->
 
 	display: ->
-		console.log "Video"
-		console.log " Director: #{@director}"
-		console.log " Title: #{@title}"
-		console.log " # Copies: #{@numCopies}"
-		console.log " Play Time: #{@playTime}"
+		console.log """Video
+		 \t Director: #{@director}
+		 \t Title: #{@title}
+		 \t # Copies: #{@numCopies}
+		 \t Play Time: #{@playTime}"""
 
 class Decorator
 	constructor: (@libraryItem) ->
@@ -51,7 +51,7 @@ class Borrowable extends Decorator
 
 	display: ->
 		super()
-		console.log borrower for borrower in @borrowers
+		console.log "Borrowers: \n\t #{borrower for borrower in @borrowers}"
 
 ### 
 Usage
