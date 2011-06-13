@@ -39,7 +39,7 @@ class Borrowable extends Decorator
 		@borrowers.push borrower
 
 	removeBorrower: (borrower) ->
-		@[t..t] = [] if (t = @.indexOf(borrower)) > -1
+		@borrowers[t..t] = [] if (t = @borrowers.indexOf(borrower)) > -1
 	
 	borrowItem: (name) ->
 		@addBorrower name
